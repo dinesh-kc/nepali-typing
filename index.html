@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>baseProject</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* .jumbotron {
+      height: 60vh;
+    } */
+  </style>
+
+  <!-- bootstrap  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous">
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+  </head>
+
+<body>
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+      <a class="navbar-brand" href="#">Nepali Typing Test</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Find Me <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Fork Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login/Register</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron" style="margin-top: -30px;">
+      <h5>Free Open Source Nepali/English Typing Testing Tool powered by <a href="https://www.facebook.com/ac.dineshkc" target="#">Dinesh Kc</a> </h5>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="row">
+            <span>Change Language</span>
+            <select name="language" id="language" class="form-control form-control-sm">
+              <option value="2">English</option>
+              <option value="1">Nepali</option>
+            </select>
+          </div>
+
+          <div class="row mt-2">
+            <span>Change Level</span>
+            <select name="level" id="level" class="form-control form-control-sm">
+              <option value="0">Change Level</option>
+              <option value="1">Level1</option>
+              <option value="2">Level2</option>
+              <option value="3">Level3</option>
+              <option value="4">Level4</option>
+              <option value="5">Final Level</option>
+
+            </select>
+          </div>
+
+          <div class="row">
+            <button type="button" class="btn btn-outline-info btn-md mt-3 mr-2" id="btnStart"> <i class="fas fa-play-circle"></i>Start Test</button>
+            <button type="button" class="btn btn-outline-danger btn-md mt-3" id="btnRefresh"> <i class="fas fa-redo"></i>&nbsp; Refresh    </button>
+
+
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="quoteBox" id="quoteBox" tabindex="0">
+         
+          </div>
+
+          <div class="input-area">
+            <input type="text" tabindex="1"  id="inputTextBox" disabled>
+          </div>
+          <div class="alert alert-danger" role="alert">
+            Note:*Dont Use backslace to correct your word , Your error will be recorded and showed at last.😀
+          </div>
+
+     
+        </div>
+
+        <div class="col-md-2" style="margin-top: -10px;">
+          <div class="row circle" id="timer">
+            <span id="timer"></span>
+            <!-- <ul class="list-group"> -->
+              <!-- <li class="list-group-item">Timer <span id="timer">60</span></li>
+              <li class="list-group-item">WPM <span id="wpm"></span></li>
+              <li class="list-group-item">CPM <span>0</span></li>
+              <li class="list-group-item">Error <span id="error">0</span></li>
+              <li class="list-group-item">Accuracy <span>0</span></li> -->
+            <!-- </ul> -->
+          </div>
+      
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container mt-0">
+      <div class="row">
+        <h2>Tips:*</h2>
+        <ul>
+          <li>Word Per Minute (WPM) is measured by calculating how many words you can type in 1 minute.</li>
+          <li>Character Per Minute (CPM) calculates how many characters are typed per minute.</li>
+          <li>The top typing speed was achieved by <a href="https://en.wikipedia.org/wiki/Typing#Alphanumeric_entry"
+              target="_blank">Stella Pajunas</a> in 1946, whereas Mrs. Barbara Blackburn has averaged
+            150 wpm in 50 minutes and her top speed was 212 wpm.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">v1.1.0:Nepali typing test,Developed by
+        <a href="https://www.facebook.com/ac.dineshkc/" target="#">Dinesh Kc</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+  </div>
+
+  <!-- 
+  <script src="js/script.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+
+</html>
