@@ -6,12 +6,12 @@
 let text = ''
 const RANDOM_API_QUOTE_URL = 'https://api.quotable.io/random'
 
-
-function getRandomQuotes(){
-    return fetch(RANDOM_API_QUOTE_URL)
+ async function getRandomQuotes(){
+      return fetch(RANDOM_API_QUOTE_URL)
   .then(response => response.json())
   .then(data => data)
 }
+
 
 
 
@@ -46,17 +46,11 @@ window.onload = function () {
 }
 
 //Got error with geetting next text with Async func. so removed
-function addText() {
-    let d = ''
-    const quote = getRandomQuotes().then(function (data){
-        d = data.content
-        
-    })
-  
-  console.log(d);
+async function addText() {
+    let quote  = await getRandomQuotes()
     
- 
-    // text = quote.content
+   
+    text = quote.content
     let quoteContent = quote.content;
 
     text = quoteContent
