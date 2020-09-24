@@ -50,7 +50,7 @@ async function addText() {
     let quote  = await getRandomQuotes()
     
    
-    text = quote.content
+    text = quote    .content
     let quoteContent = quote.content;
 
     text = quoteContent
@@ -181,7 +181,7 @@ class typingTest {
 
     addPurple() {
         if (this.quote.length == this.index) {
-            alert("entered here !!")
+            // alert("entered here !!")
             quoteBox.innerText = ''
             this.quote = ''
             this.totalWord += this.index
